@@ -47,78 +47,6 @@ The dataset was split automatically by the notebook:
 - Validation: 15%
 - Test: 15%
 
-
-## Sample Classifications
-
-| Comment | Predicted Label | Confidence |
-|----------|----------|----------:|
-| The reason Liverpool has fallen off this hard is because Nunez needs 15 big chances before he scores. If he converted half his chances he'd score 40 a season and you cant win with a striker like that. | analysis | 0.38 |
-| Lionel Messi is the oldest player to score a hat-trick at a World Cup game. He is also now tied with Miroslav Klose as the joint-top goalscorer of all time at 16 goals at the FIFA World Cup. | analysis | 0.39 |
-| Morocco really just seemed to lack quality in the final third. Cunha should start for Brazil imo. | analysis | 0.39 |
-| Messi is still the best. | analysis | 0.38 |
-| Tunisia got wrecked. Well done Japan. | analysis | 0.40 |
-| Ferran please stay on the bench for the rest of the tournament. | analysis | 0.39 |
-| Portugal look downright horrible, I don't see them going far. Not even going to address the elephant in the room, Father Time is undefeated. | analysis | 0.39 |
-
-### Correct Prediction Example 1
-
-**Comment:**
-> The reason Liverpool has fallen off this hard is because Nunez needs 15 big chances before he scores. If he converted half his chances he'd score 40 a season and you cant win with a striker like that.
-
-**Prediction:** analysis (0.38)
-
-This prediction is reasonable because the comment provides a cause-and-effect explanation for Liverpool's struggles and supports the claim with football-specific reasoning. The structure matches the project's definition of analysis.
-
----
-
-### Correct Prediction Example 2
-
-**Comment:**
-> Morocco really just seemed to lack quality in the final third. Cunha should start for Brazil imo.
-
-**Prediction:** analysis (0.39)
-
-This prediction is reasonable because the comment discusses a team's performance and provides a football-related explanation. It goes beyond expressing emotion and attempts to evaluate play on the field.
-
----
-
-### Incorrect Prediction Example 1
-
-**Comment:**
-> Messi is still the best.
-
-**True Label:** hot_take
-
-**Prediction:** analysis (0.38)
-
-This prediction is incorrect because the comment is simply an unsupported opinion. It contains no evidence or reasoning and therefore should be classified as a hot_take.
-
----
-
-### Incorrect Prediction Example 2
-
-**Comment:**
-> Tunisia got wrecked. Well done Japan.
-
-**True Label:** reaction
-
-**Prediction:** analysis (0.40)
-
-This comment is primarily an emotional reaction to a match result. It contains no tactical reasoning or supporting evidence. The model incorrectly classified it as analysis.
-
----
-
-### Incorrect Prediction Example 3
-
-**Comment:**
-> Ferran please stay on the bench for the rest of the tournament.
-
-**True Label:** hot_take
-
-**Prediction:** analysis (0.39)
-
-This comment expresses a strong opinion about a player without any explanation or evidence. The model failed to distinguish an unsupported opinion from genuine football analysis.
-
 ## Difficult Annotation Cases
 
 ### Example 1
@@ -296,6 +224,79 @@ Macro F1: 0.21
 
 
 ![Confusion Matrix](images/confusion_matrix.png)
+
+
+
+## Sample Classifications
+
+| Comment | Predicted Label | Confidence |
+|----------|----------|----------:|
+| The reason Liverpool has fallen off this hard is because Nunez needs 15 big chances before he scores. If he converted half his chances he'd score 40 a season and you cant win with a striker like that. | analysis | 0.38 |
+| Lionel Messi is the oldest player to score a hat-trick at a World Cup game. He is also now tied with Miroslav Klose as the joint-top goalscorer of all time at 16 goals at the FIFA World Cup. | analysis | 0.39 |
+| Morocco really just seemed to lack quality in the final third. Cunha should start for Brazil imo. | analysis | 0.39 |
+| Messi is still the best. | analysis | 0.38 |
+| Tunisia got wrecked. Well done Japan. | analysis | 0.40 |
+| Ferran please stay on the bench for the rest of the tournament. | analysis | 0.39 |
+| Portugal look downright horrible, I don't see them going far. Not even going to address the elephant in the room, Father Time is undefeated. | analysis | 0.39 |
+
+### Correct Prediction Example 1
+
+**Comment:**
+> The reason Liverpool has fallen off this hard is because Nunez needs 15 big chances before he scores. If he converted half his chances he'd score 40 a season and you cant win with a striker like that.
+
+**Prediction:** analysis (0.38)
+
+This prediction is reasonable because the comment provides a cause-and-effect explanation for Liverpool's struggles and supports the claim with football-specific reasoning. The structure matches the project's definition of analysis.
+
+---
+
+### Correct Prediction Example 2
+
+**Comment:**
+> Morocco really just seemed to lack quality in the final third. Cunha should start for Brazil imo.
+
+**Prediction:** analysis (0.39)
+
+This prediction is reasonable because the comment discusses a team's performance and provides a football-related explanation. It goes beyond expressing emotion and attempts to evaluate play on the field.
+
+---
+
+### Incorrect Prediction Example 1
+
+**Comment:**
+> Messi is still the best.
+
+**True Label:** hot_take
+
+**Prediction:** analysis (0.38)
+
+This prediction is incorrect because the comment is simply an unsupported opinion. It contains no evidence or reasoning and therefore should be classified as a hot_take.
+
+---
+
+### Incorrect Prediction Example 2
+
+**Comment:**
+> Tunisia got wrecked. Well done Japan.
+
+**True Label:** reaction
+
+**Prediction:** analysis (0.40)
+
+This comment is primarily an emotional reaction to a match result. It contains no tactical reasoning or supporting evidence. The model incorrectly classified it as analysis.
+
+---
+
+### Incorrect Prediction Example 3
+
+**Comment:**
+> Ferran please stay on the bench for the rest of the tournament.
+
+**True Label:** hot_take
+
+**Prediction:** analysis (0.39)
+
+This comment expresses a strong opinion about a player without any explanation or evidence. The model failed to distinguish an unsupported opinion from genuine football analysis.
 
 
 
